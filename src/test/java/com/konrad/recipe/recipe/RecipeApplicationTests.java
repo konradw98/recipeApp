@@ -1,4 +1,4 @@
-package com.konrad.recipe;
+package com.konrad.recipe.recipe;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
