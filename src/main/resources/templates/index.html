@@ -6,6 +6,26 @@
 </head>
 <h1>cos sie pokazuje</h1>
 <body>
+<table border="1" cellpadding="10">
+    <thead>
+
+    <th>CATEGOTY</th>
+    <th>DESCRIPTION</th>
+    <th>DIFFICULTY</th>
+
+
+
+
+    </thead>
+    <tbody>
+    <tr th:each="recipe:${recipeList}">
+        <td th:text="${recipe.getDescription()}">CATEGOTY</td>
+        <td th:text="${recipe.getDescription()}">DESCRIPTION</td>
+        <td th:text="${recipe.getDifficulty()}">DIFFICULTY</td>
+
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
