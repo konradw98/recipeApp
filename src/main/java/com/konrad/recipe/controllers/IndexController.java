@@ -41,8 +41,8 @@ public class IndexController {
         System.out.println("Cat id is:"+categoryOptional.get().getId());
         System.out.println("UOM id is:"+unitOfMeasureOptional.get().getId());*/
 
-        Set<Recipe> recipeList= recipeService.getRecipes();
-        model.addAttribute(recipeList);
+        Set<Recipe> recipes= recipeService.getRecipes();
+        model.addAttribute("recipes",recipes);
 
         return "index";
     }
