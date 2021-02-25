@@ -7,6 +7,7 @@ import com.konrad.recipe.repositories.CategoryRepository;
 import com.konrad.recipe.repositories.RecipeRepository;
 import com.konrad.recipe.repositories.UnitOfMeasureRepository;
 import com.konrad.recipe.services.RecipeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+@Slf4j
 @Controller
 public class IndexController {
 
