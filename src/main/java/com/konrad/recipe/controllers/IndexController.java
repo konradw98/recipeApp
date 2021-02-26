@@ -20,15 +20,15 @@ import java.util.Set;
 @Controller
 public class IndexController {
 
-    private CategoryRepository categoryRepository;
-    private UnitOfMeasureRepository unitOfMeasureRepository;
-    private RecipeRepository recipeRepository;
+   // private CategoryRepository categoryRepository;
+   // private UnitOfMeasureRepository unitOfMeasureRepository;
+    //private RecipeRepository recipeRepository;
     private final RecipeService recipeService;
 
-    public IndexController(CategoryRepository categoryRepository, UnitOfMeasureRepository unitOfMeasureRepository,RecipeRepository recipeRepository, RecipeService recipeService) {
-        this.categoryRepository = categoryRepository;
-        this.unitOfMeasureRepository = unitOfMeasureRepository;
-        this.recipeRepository=recipeRepository;
+    public IndexController(RecipeService recipeService){//CategoryRepository categoryRepository, UnitOfMeasureRepository unitOfMeasureRepository,RecipeRepository recipeRepository) {
+        //this.categoryRepository = categoryRepository;
+       // this.unitOfMeasureRepository = unitOfMeasureRepository;
+       // this.recipeRepository=recipeRepository;
         this.recipeService=recipeService;
     }
 
