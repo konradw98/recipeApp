@@ -1,10 +1,10 @@
 package com.konrad.recipe.controllers;
 
+import com.konrad.recipe.domain.Recipe;
 import com.konrad.recipe.services.RecipeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class RecipeController {
@@ -20,5 +20,17 @@ public class RecipeController {
 
         return "recipe/show";
     }
+    @RequestMapping("recipe/new")
+    public String newRecipe(Model model){
+        Recipe r1=recipeService.findById(1L);
+        model.addAttribute("recipe",r1);
+         return "recipe/recipeform";
+    }
 
+    @PostMapping("recipe")
+    public String saveOrUpdate(@ModelAttribute Recipe recipe){
+        recipeService.saveRecipe(recipe);
+
+        return "redirect:/recipe/show/"+recipe.getId();
+    }
 }
